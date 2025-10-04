@@ -21,7 +21,7 @@
         return;
       }
       const value = 2n ** BigInt(x); // 誤差ゼロの整数計算
-      result.innerText = `2^${x} = ${value.toString()}`;
+      result.innerText = `${value.toString()}`;
     }
 
     input.addEventListener("input", calculate);
