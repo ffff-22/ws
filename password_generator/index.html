@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>パスワードジェネレーター</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>パスワードジェネレーター</h1>
+    <label for="length">文字数:</label>
+    <input type="number" id="length" min="4" max="32" value="12">
+    
+    <div class="options">
+      <label><input type="checkbox" id="includeUppercase" checked> 大文字</label>
+      <label><input type="checkbox" id="includeLowercase" checked> 小文字</label>
+      <label><input type="checkbox" id="includeNumbers" checked> 数字</label>
+      <label><input type="checkbox" id="includeSymbols"> 記号</label>
+    </div>
+
+    <button onclick="generatePassword()">生成する</button>
+    <input type="text" id="result" readonly>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
