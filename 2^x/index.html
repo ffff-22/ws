@@ -6,7 +6,26 @@
 </head>
 <body>
   <p>2^
-    <input type="number" min="0">
+    <input id="x" type="number" min="0">
   </p>
+  <div id="result">結果がここに表示されます</div>
+  <script>
+    // JavaScriptで計算
+    const input = document.getElementById("x");
+    const result = document.getElementById("result");
+
+    function calculate() {
+      const x = parseInt(input.value);
+      if (isNaN(x)) {
+        result.innerText = "数値を入力してください";
+        return;
+      }
+      const value = 2n ** BigInt(x); // 誤差ゼロの整数計算
+      result.innerText = `2^${x} = ${value.toString()}`;
+    }
+
+    input.addEventListener("input", calculate);
+    window.addEventListener("DOMContentLoaded", calculate);
+  </script>
 </body>
 </html>
