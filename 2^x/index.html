@@ -18,7 +18,7 @@
     function calculate() {
       const x = parseInt(input.value);
       if (isNaN(x)) {
-        result.innerText = "数値を入力してください";
+        result.innerText = "?";
         return;
       }
       const value = 2n ** BigInt(x); // 誤差ゼロの整数計算
