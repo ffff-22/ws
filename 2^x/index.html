@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>2^x</title>
+  <title>2^xa</title>
   <style>
     #result {
       font-weight: bold;
@@ -15,7 +15,7 @@
     =
     <span id="result">結果がここに表示されます</span>
   </p>
-  <button onclick="alert('クリックされました！')">
+  <button onclick="button()">
     aaa
   </button>
   
@@ -36,6 +36,17 @@
 
     input.addEventListener("input", calculate);
     window.addEventListener("DOMContentLoaded", calculate);
+
+    function button() {
+      const text = x; // コピーする内容
+      navigator.clipboard.writeText(text)
+        .then(() => {
+          alert("コピーしました: " + text);
+        })
+        .catch(err => {
+          alert("コピーに失敗しました: " + err);
+        });
+    }
   </script>
 </body>
 </html>
