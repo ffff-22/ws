@@ -15,5 +15,21 @@
 </head>
 <body>
   <p>/say 文字列template</p>
+  <button onclick="button()">
+    コピー
+    <img id="button1" src="https://ffff-22.github.io/ws/content_copy_50_1F1F1F.png" alt="画像" style="width:15px; vertical-align:middle;">
+  </button>
+  <script>
+    function button1() {
+      const text = document.getElementById("button1").textContent; // コピーする内容
+      navigator.clipboard.writeText(text)
+        .then(() => {
+          alert("コピーしました: " + text);
+        })
+        .catch(err => {
+          alert("コピーに失敗しました: " + err);
+        });
+    }
+  </script>
 </body>
 </html>
