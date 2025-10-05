@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>2^xc</title>
+  <title>2^x</title>
   <style>
     #result {
       font-weight: bold;
@@ -38,7 +38,7 @@
     window.addEventListener("DOMContentLoaded", calculate);
 
     function button() {
-      const text = Number(result); // コピーする内容
+      const text = String(result); // コピーする内容
       navigator.clipboard.writeText(text)
         .then(() => {
           alert("コピーしました: " + text);
