@@ -14,14 +14,14 @@
   </style>
 </head>
 <body>
-  <p>/say 文字列template</p>
+  <p id="text1">/say 文字列template</p>
   <button onclick="button1()">
     コピー
-    <img id="button1" src="https://ffff-22.github.io/ws/content_copy_50_1F1F1F.png" alt="画像" style="width:15px; vertical-align:middle;">
+    <img src="https://ffff-22.github.io/ws/content_copy_50_1F1F1F.png" alt="画像" style="width:15px; vertical-align:middle;">
   </button>
   <script>
     function button1() {
-      const text = document.getElementById("button1").textContent; // コピーする内容
+      const text = document.getElementById("text1").textContent; // コピーする内容
       navigator.clipboard.writeText(text)
         .then(() => {
           alert("コピーしました: " + text);
