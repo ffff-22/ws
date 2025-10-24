@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>コピー</title>
+  <link rel="icon" href="https://ffff-22.github.io/ws/copy/icon.png" type="image/png">
+  <style>
+    @font-face {
+      font-family: 'gsc';
+      src: url('https://ffff-22.github.io/ws/GoogleSansCode-VariableFont_wght.ttf') format('truetype');
+    }
+    p {
+      font-family: 'gsc', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h3>上付きハーフブロック</h3>
+  <p id="text1">/give @p oak_slab[block_state={type:top}]</p>
+  <button onclick="button1()">
+    ↑をコピー
+    <img src="https://ffff-22.github.io/ws/content_copy_50_1F1F1F.png" alt="画像" style="width:15px; vertical-align:middle;">
+  </button>
+  <script>
+    function button1() {
+      const text = document.getElementById("text1").textContent; // コピーする内容
+      navigator.clipboard.writeText(text)
+        .then(() => {
+          alert("コピーしました: " + text);
+        })
+        .catch(err => {
+          alert("コピーに失敗しました: " + err);
+        });
+    }
+  </script>
+</body>
+</html>
